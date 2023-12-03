@@ -1,0 +1,17 @@
+[gcode_shell_command framelighttoggle]
+command: sh /home/mks/framelighttoggle.sh
+timeout: 30.
+verbose: True
+
+[gcode_shell_command partlighttoggle]
+command: sh /home/mks/partlighttoggle.sh
+timeout: 30.
+verbose: True
+
+[gcode_macro Frame_Light_Toggle]
+gcode:
+  RUN_SHELL_COMMAND CMD=framelighttoggle
+
+[gcode_macro Part_Light_Toggle]
+gcode:
+  RUN_SHELL_COMMAND CMD=partlighttoggle
